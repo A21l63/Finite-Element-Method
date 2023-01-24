@@ -17,7 +17,7 @@ public:
     double b_1 = 0;
 
     double f_K(double x) {
-        return -1;//(- M_PI * M_PI) * x * cos(M_PI * x); //- 2 * M_PI * M_PI * sin(M_PI * x);
+        return 2-3 * x;//(- M_PI * M_PI) * x * cos(M_PI * x); //- 2 * M_PI * M_PI * sin(M_PI * x);
     }
 
     double p_k(double x) {

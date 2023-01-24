@@ -4,7 +4,7 @@
 
 #ifndef MDA_CONST_H
 #define MDA_CONST_H
-static int NUM = 100000;
+static int NUM = 5000;
 static double LEFT = 0;
 static double RIGHT = 1;
 

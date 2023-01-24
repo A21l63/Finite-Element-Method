@@ -87,14 +87,15 @@ void GalerkinMethod::solve() {
     double y_orig;
     triDiag(this->A,this->B,this->C, this->D, numberOfFunc);
     double norm = 0;
-    double abbs = 0;
+    double abbs;
     for (int i = 0; i < numberOfNodes; i++) {
-        y_orig = (grid.X[i]) * (1 - grid.X[i])/2;
+        y_orig = (grid.X[i]) * (grid.X[i]) * (1 - grid.X[i])/2;
         abbs = abs(result[i] - y_orig);
         //std::cout << "x = " << grid.X[i] << " Result = " << result[i] << " Correct = " << y_orig << " ||u - y || " << abs(result[i] - y_orig) << std::endl;
         if (norm <= abbs) {
             norm = abbs;
         }
     }
+    std::cout << norm << std::endl;
     std::cout << L2norm();
 }
